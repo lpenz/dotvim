@@ -1,0 +1,65 @@
+*cHeaderUtils.txt*   utilities for C headers.                        v1.1
+
+
+                        CHEADERUTILS REFERENCE MANUAL~
+
+
+Utilities for C headers.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License.  See
+    http://www.gnu.org/copyleft/gpl.txt
+
+==============================================================================
+CONTENT                                                *cHeaderUtils-contents* 
+
+    Installation                       : |cHeaderUtils-install|
+    Intro                              : |cHeaderUtils|
+    Keys                               : |cHeaderUtils-keys|
+    Todo list                          : |cHeaderUtils-todo|
+    Links                              : |cHeaderUtils-links|
+
+==============================================================================
+1. cHeaderUtils Installation                            *cHeaderUtils-install*
+
+    In order to install the plugin, place the cHeaderUtils.vim file into a plugin
+    directory in your runtime path (please see |add-global-plugin| and
+    |'runtimepath'|).
+
+    A key-map should also be made. Put in your |.vimrc| something like: >
+        nnoremap <leader>fh :call CHeaderUtils_HeadersFromFuncUnderCursor()<CR>
+        nnoremap <leader>a :call CHeaderUtils_GotoHeaderFromFuncUnderCursor()<CR>
+<
+
+==============================================================================
+2. cHeaderUtils Intro                                           *cHeaderUtils*
+
+    This is cHeaderUtils, a collection of utilities to ease the maintenance of
+    C code.
+
+
+2.1 List of Features:                                  *cHeaderUtils-features*
+---------------------
+    
+    - Go to any header file corresponding to any function.
+    - Fetch the list of header files required for a function.
+
+==============================================================================
+3. cHeaderUtils Options                                    *cHeaderUtils-opts*
+
+    There are no options for cHeaderUtils.
+
+==============================================================================
+4. cHeaderUtils Todo                                       *cHeaderUtils-todo*
+
+    - Improve documentation.
+    - More features!
+
+==============================================================================
+5. cHeaderUtils Links                                     *cHeaderUtils-links*
+
+    http://www.vim.org/scripts/script.php?script_id=?
+        Home page of cHeaderUtils.
+
+
+ vim:tw=78:ts=8:ft=help:norl:
