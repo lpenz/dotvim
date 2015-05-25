@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    # - apt: package=vim state=present
+    - git: repo="https://github.com/lpenz/dotvim.git" dest="{{lookup('env','HOME')}}/.vim"
+    - git: repo="https://github.com/gmarik/Vundle.vim.git" dest="{{lookup('env','HOME')}}/.vim/bundle/Vundle.vim"
+    - file: state=link src="{{lookup('env','HOME')}}/.vim/vimrc" dest="{{lookup('env','HOME')}}/.vimrc"
+    - file: state=link src="{{lookup('env','HOME')}}/.vim/gvimrc" dest="{{lookup('env','HOME')}}/.gvimrc"
+    - command: vim -X -n -u NONE -c 'silent! source ~/.vimrc' -c 'PluginInstall' -c 'qa!'
