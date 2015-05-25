@@ -26,6 +26,7 @@ Plugin 'vim-scripts/DirDiff.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
