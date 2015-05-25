@@ -64,15 +64,11 @@ let g:vim_json_syntax_conceal = 0
 
 """""
 " Options:
-" "set nobackup
-" "set nowritebackup
+" set nobackup
+" set nowritebackup
 " set bkc=auto,breakhardlink
-" set bg=dark
-" filetype on
-" filetype plugin indent on
 " set smartcase
 " let perl_fold = 1
-" let mapleader=','
 " set autoindent
 " set autowriteall
 " set autoread
@@ -80,12 +76,9 @@ let g:vim_json_syntax_conceal = 0
 " set bs+=start
 " set dictionary=$HOME/.vim/word.list
 " set foldenable foldnestmax=1 foldopen=block,hor,mark,percent,quickfix,search,tag,undo,jump
-" set grepprg=grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ 
 " set isk-=(,)
 " set laststatus=2
 " set mousemodel=popup_setpos
-" set makeprg=mymake
-" set expandtab tabstop=4 shiftwidth=4
 " set nowrap
 " set ruler
 " set scrolloff=5
@@ -100,11 +93,10 @@ let g:vim_json_syntax_conceal = 0
 " set ve=block
 " set wildignore=*.o,*.d,*.hi,*.pyc
 " set ignorecase
-" set wildmenu
 " set cscopetag
 " set nofsync
 " let g:is_bash = 1
-" "set wildmode=longest,full
+" set wildmode=longest,full
 " set complete=.,w,b,u,t
 " runtime macros/matchit.vim
 
@@ -115,6 +107,11 @@ set expandtab tabstop=4 shiftwidth=4
 set mouse=a
 set hlsearch
 set showcmd
+set wildmenu
+set grepprg=grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ 
+let mapleader=','
+set expandtab tabstop=4 shiftwidth=4
+set makeprg=mymake
 
 set background=dark
 colorscheme solarized
