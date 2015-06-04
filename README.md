@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lpenz/dotvim.png?branch=master)](https://travis-ci.org/lpenz/dotvim)
+
 # dotvim
 
 My ~/.vim directory, with custom plugins and filetype configurations - everything that is not vundle-installable.
