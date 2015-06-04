@@ -10,6 +10,9 @@ Manually:
 
     $ vim -c 'PluginInstall' -c 'qa!'
 
+    $ make -C $HOME/.vim/bundle/vimproc.vim
+
+
 ... or using ansible-pull:
 
     $ ansible-pull -U https://github.com/lpenz/dotvim.git -i localhost, ansible-playbook.yml
