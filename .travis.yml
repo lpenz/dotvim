@@ -1,5 +1,7 @@
+language: vim
+
 install:
-  - pip install --user ansible
+  - pip install --user ansible vim-vint
 
 before_script:
   - git clone https://github.com/syngan/vim-vimlint /tmp/vim-vimlint
@@ -7,5 +9,6 @@ before_script:
 
 script:
   - sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v autoload
+  #- find . -name '*.vim' -exec vint vimrc gvimrc '{}' '+' # solve the issues before enabling it
   - ansible-playbook -i localhost, -c local ansible-playbook.yml
 
