@@ -127,6 +127,7 @@ let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.fi
 
 " Disable help:
 nmap <F1> :echo ""<CR>
+imap <F1> <C-O>:echo ""<CR>
 
 set makeprg=mymake
 
