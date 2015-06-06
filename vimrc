@@ -80,7 +80,6 @@ let g:vim_json_syntax_conceal = 0
 " set isk-=(,)
 " set laststatus=2
 " set mousemodel=popup_setpos
-" set nowrap
 " set ruler
 " set scrolloff=5
 " set showmatch
@@ -113,6 +112,7 @@ set grepprg=grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exc
 let mapleader=','
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
+set nowrap
 
 set background=dark
 colorscheme solarized
