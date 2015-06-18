@@ -92,7 +92,6 @@ let g:vim_json_syntax_conceal = 0
 " set vb t_vb=
 " set ve=block
 " set wildignore=*.o,*.d,*.hi,*.pyc
-" set ignorecase
 " set cscopetag
 " set nofsync
 " let g:is_bash = 1
@@ -113,6 +112,7 @@ let mapleader=','
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
 set nowrap
+set ignorecase
 
 set background=dark
 colorscheme solarized
