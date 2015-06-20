@@ -71,7 +71,6 @@ let g:vim_json_syntax_conceal = 0
 " set smartcase
 " let perl_fold = 1
 " set autoindent
-" set autowriteall
 " set autoread
 " set bs+=indent
 " set bs+=start
@@ -112,6 +111,7 @@ let mapleader=','
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
 set nowrap
+set autowriteall
 set ignorecase
 
 set background=dark
