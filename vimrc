@@ -101,7 +101,6 @@ let g:vim_json_syntax_conceal = 0
 set noswapfile
 syntax enable
 set notitle
-set expandtab tabstop=4 shiftwidth=4
 set mouse=a
 set hlsearch
 set showcmd
