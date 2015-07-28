@@ -311,7 +311,7 @@ fu! s:CU2()
 	elseif filereadable('.hg/00changelog.i')
 		let cmd='hg status'
 	elseif filereadable('dmptinfo/platform.json')
-		let cmd='dmpt status -d'
+		let cmd='dmpt status'
 	elseif filereadable('.git/config') || filereadable('../.git/config')
 		let cmd='git status; git diff --name-status'
 		"Gstatus
