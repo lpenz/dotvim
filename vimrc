@@ -96,7 +96,6 @@ let g:vim_json_syntax_conceal = 0
 " let g:is_bash = 1
 " set wildmode=longest,full
 " set complete=.,w,b,u,t
-" runtime macros/matchit.vim
 
 set noswapfile
 syntax enable
