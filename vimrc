@@ -30,6 +30,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'mitsuhiko/vim-jinja'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
