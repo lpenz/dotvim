@@ -28,6 +28,8 @@ Plugin 'vim-scripts/Align'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
