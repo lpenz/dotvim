@@ -160,7 +160,7 @@ nnoremap <silent> <F10> :make<CR>
 nnoremap <silent> <F11> :call VimCommanderToggle()<CR>
 imap <silent> <F10> <C-O><F10>
 
-nnoremap <silent> <F12> :diffupdate<CR> zMzv
+nnoremap <silent> <F12> :NERDTreeToggle<CR>
 
 nnoremap <silent> <C-C> :qa!<CR>
 nnoremap <silent> <C-Q> :bd<CR>
