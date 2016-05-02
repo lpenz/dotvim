@@ -62,6 +62,7 @@ let g:syntastic_javascript_checkers = ["dmjslint"]
 let g:syntastic_json_checkers = ["dmjsonlint"]
 let g:syntastic_sh_checkers = ["shellcheck"]
 let g:syntastic_zsh_checkers = ["shellcheck"]
+let g:syntastic_haskell_checkers = ["hdevtools","hlint"]
 "let g:syntastic_auto_loc_list=1
 
 let g:vim_json_syntax_conceal = 0
