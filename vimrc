@@ -40,6 +40,8 @@ Plugin 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
 
+Plugin 'nbouscal/vim-stylish-haskell'
+
 call vundle#end()
 filetype plugin indent on
 
