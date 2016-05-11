@@ -36,11 +36,10 @@ Plugin 'mitsuhiko/vim-jinja'
 " (The latter must be installed before it can be used.)
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
+Plugin 'lpenz/vim-codefmt-haskell'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
-
-Plugin 'nbouscal/vim-stylish-haskell'
 
 call vundle#end()
 filetype plugin indent on
