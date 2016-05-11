@@ -51,6 +51,7 @@ Glaive codefmt plugin[mappings]
 
 " Syntastic:
 "let g:syntastic_check_on_open = 1
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_c_no_include_search = 1
 let loaded_gcc_syntax_checker = 1
 "let loaded_ycm_c_syntax_checker = 1
