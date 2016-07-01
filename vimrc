@@ -32,6 +32,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mitsuhiko/vim-jinja'
 
+Plugin 'rust-lang/rust.vim'
+Plugin 'syml/rust-codefmt.git'
+
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plugin 'google/vim-maktaba'
