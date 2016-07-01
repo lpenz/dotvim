@@ -106,6 +106,7 @@ let g:vim_json_syntax_conceal = 0
 " set wildmode=longest,full
 " set complete=.,w,b,u,t
 
+set diffopt=filler,vertical
 set noswapfile
 syntax enable
 set notitle
