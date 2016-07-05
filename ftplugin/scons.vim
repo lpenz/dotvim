@@ -9,6 +9,7 @@ endif
 let b:did_ftplugin_home_scons = 1
 
 setlocal expandtab
+setlocal autoindent
 
 fun! s:SConsView()
 	call system('sconsview')
@@ -16,4 +17,6 @@ endf
 
 command! -nargs=0 SConsView :call s:SConsView()
 nmap <buffer> <silent> <F3> :SConsView<CR>
+
+AutoFormatBuffer autopep8
 
