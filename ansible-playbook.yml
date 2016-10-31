@@ -6,4 +6,3 @@
     - file: state=link src="{{lookup('env','HOME')}}/.vim/vimrc" dest="{{lookup('env','HOME')}}/.vimrc"
     - file: state=link src="{{lookup('env','HOME')}}/.vim/gvimrc" dest="{{lookup('env','HOME')}}/.gvimrc"
     - command: vim -X -n -u NONE -c 'silent! source ~/.vimrc' -c 'PluginInstall' -c 'qa!'
-    - command: make chdir="{{lookup('env','HOME')}}/.vim/bundle/vimproc.vim" creates="{{lookup('env','HOME')}}/.vim/bundle/vimproc.vim/autoload/vimproc_linux64.so"
