@@ -28,6 +28,7 @@ Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mitsuhiko/vim-jinja'
+Plugin 'mileszs/ack.vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'syml/rust-codefmt.git'
