@@ -72,37 +72,6 @@ let g:vim_json_syntax_conceal = 0
 
 """""
 " Options:
-" set nobackup
-" set nowritebackup
-" set bkc=auto,breakhardlink
-" set smartcase
-" let perl_fold = 1
-" set autoindent
-" set autoread
-" set bs+=indent
-" set bs+=start
-" set dictionary=$HOME/.vim/word.list
-" set foldenable foldnestmax=1 foldopen=block,hor,mark,percent,quickfix,search,tag,undo,jump
-" set isk-=(,)
-" set laststatus=2
-" set mousemodel=popup_setpos
-" set ruler
-" set scrolloff=5
-" set showmatch
-" set smarttab
-" set statusline=%<%f%m%w%y%r[fdm:%{&fdm}]
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" set statusline+=%=%l,%c%V\ \ \ %P
-" set vb t_vb=
-" set ve=block
-" set wildignore=*.o,*.d,*.hi,*.pyc
-" set cscopetag
-" set nofsync
-" let g:is_bash = 1
-" set wildmode=longest,full
-" set complete=.,w,b,u,t
 
 set diffopt=filler,vertical
 set noswapfile
