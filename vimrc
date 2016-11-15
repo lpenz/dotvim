@@ -88,6 +88,7 @@ set makeprg=mymake
 set nowrap
 set autowriteall
 set ignorecase
+set laststatus=2 " required by airline
 
 set background=dark
 colorscheme solarized
