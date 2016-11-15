@@ -527,7 +527,7 @@ nnoremap <leader>c- :call CompleteTill78('-')<CR>
 
 nnoremap <leader>a :A<CR>
 
-nnoremap <leader>l :Lid <C-R><C-W><CR>
+nnoremap <leader>l :Ack <C-R><C-W><CR>
 
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
