@@ -559,3 +559,9 @@ endf
 command! -nargs=0 See :call s:See()
 nmap <silent> <F3> :See<CR>
 
+" Local vimrc: """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if filereadable(glob("~/.vim/vimrc.local"))
+    source ~/.vim/vimrc.local
+endif
+
