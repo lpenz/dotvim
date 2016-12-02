@@ -89,6 +89,7 @@ set autowriteall
 set ignorecase
 set laststatus=2 " required by airline
 set listchars=tab:>\ ,trail:_
+set path=.,,
 set tags=tags
 set makeprg=mymake
 
@@ -117,9 +118,6 @@ end
 " Disable help:
 nmap <F1> :echo ""<CR>
 imap <F1> <C-O>:echo ""<CR>
-" Path:
-set path=.
-set path+=**
 
 " Keys:
 nnoremap <silent> <F2> :update!<CR>
