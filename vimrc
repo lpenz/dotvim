@@ -55,8 +55,6 @@ Glaive codefmt plugin[mappings]
 "let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_c_no_include_search = 1
-let loaded_gcc_syntax_checker = 1
-"let loaded_ycm_c_syntax_checker = 1
 let g:syntastic_c_checkers = ["dmcheck"]
 let g:syntastic_cpp_checkers = ["dmcheck"]
 let g:syntastic_scons_checkers = ["flake8"]
@@ -70,8 +68,6 @@ let g:syntastic_haskell_checkers = ["hdevtools","hlint"]
 let g:syntastic_rust_checkers = ["rustc"]
 
 "let g:syntastic_auto_loc_list=1
-
-let g:vim_json_syntax_conceal = 0
 
 """""
 " Options:
@@ -93,23 +89,20 @@ set autowriteall
 set ignorecase
 set laststatus=2 " required by airline
 set listchars=tab:>\ ,trail:_
+set tags=tags
+set makeprg=mymake
 
+" Color scheme
 set background=dark
 colorscheme solarized
 
-" Configure standard plugins:
+" Configure plugins:
 let loaded_matchparen = 1
 let c_no_comment_fold=1
 let c_gnu = 1
-
-" DirDiff
 let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.find.txt.gz,ID,tags"
-
-" Disable help:
-nmap <F1> :echo ""<CR>
-imap <F1> <C-O>:echo ""<CR>
-
-set makeprg=mymake
+let NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$']
+let g:vim_json_syntax_conceal = 0
 
 if v:version >= 700
 	set completeopt=longest,menu
@@ -121,12 +114,12 @@ if v:version >= 730
 	set undodir="/tmp/vim"
 end
 
+" Disable help:
+nmap <F1> :echo ""<CR>
+imap <F1> <C-O>:echo ""<CR>
 " Path:
 set path=.
 set path+=**
-
-" Tags:
-set tags=tags
 
 " Keys:
 nnoremap <silent> <F2> :update!<CR>
@@ -140,7 +133,6 @@ nnoremap <silent> <F11> :call VimCommanderToggle()<CR>
 imap <silent> <F10> <C-O><F10>
 
 nnoremap <silent> <F12> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$']
 
 nnoremap <silent> <C-C> :qa!<CR>
 nnoremap <silent> <C-Q> :bd<CR>
@@ -157,8 +149,6 @@ nnoremap <leader>v :grep <C-R><C-W> . <CR>
 "# Legacy stuff, should be better analysed: ##################################
 "#############################################################################
 "#############################################################################
-
-nnoremap <leader>b :Bugzilla '<C-R><C-W>'<CR>
 
 " Runline """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 fu! s:RunLine()
