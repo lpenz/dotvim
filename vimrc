@@ -92,6 +92,7 @@ set nowrap
 set autowriteall
 set ignorecase
 set laststatus=2 " required by airline
+set listchars=tab:>\ ,trail:_
 
 set background=dark
 colorscheme solarized
