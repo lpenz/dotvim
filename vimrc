@@ -31,6 +31,8 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'neomake/neomake'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'syml/rust-codefmt.git'
@@ -105,6 +107,7 @@ let c_gnu = 1
 let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.find.txt.gz,ID,tags"
 let NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$']
 let g:vim_json_syntax_conceal = 0
+let g:ctrlp_working_path_mode = 0
 
 if v:version >= 700
 	set completeopt=longest,menu
