@@ -83,7 +83,8 @@ set mouse=a
 set hlsearch
 set showcmd
 set wildmenu
-set grepprg=grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ 
+let g:grepprg_default="grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ "
+let &grepprg=g:grepprg_default
 let mapleader=','
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
