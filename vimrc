@@ -124,8 +124,10 @@ nmap <F1> :echo ""<CR>
 imap <F1> <C-O>:echo ""<CR>
 
 " Keys:
+nnoremap <silent> <leader>fs :update!<CR>
 nnoremap <silent> <F2> :update!<CR>
 imap <silent> <F2> <C-O><F2>
+nnoremap <silent> <C-P> <C-I>
 nnoremap <silent> <F4> :cn<CR>zv
 nnoremap <silent> <F5> @q
 nnoremap <silent> <F6> @w
