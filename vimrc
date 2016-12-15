@@ -32,7 +32,6 @@ Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'neomake/neomake'
-Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'syml/rust-codefmt.git'
