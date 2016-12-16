@@ -5,3 +5,5 @@ AutoFormatBuffer
 
 nnoremap <buffer> <CR> zO<CR>
 
+setlocal foldlevel=99
+
