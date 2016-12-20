@@ -128,6 +128,7 @@ nnoremap <silent> <leader>fs :update!<CR>
 nnoremap <silent> <F2> :update!<CR>
 imap <silent> <F2> <C-O><F2>
 nnoremap <silent> <C-P> <C-I>
+nnoremap <silent> <C-I> :echo ""<CR>
 nnoremap <silent> <F4> :cn<CR>zv
 nnoremap <silent> <F5> @q
 nnoremap <silent> <F6> @w
