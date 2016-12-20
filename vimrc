@@ -143,7 +143,7 @@ nnoremap <silent> <C-C> :qa!<CR>
 nnoremap <silent> <C-Q> :bd<CR>
 nnoremap <silent> Q :bd<CR>
 
-nnoremap <leader>i <C-^>
+nnoremap <leader><tab> <C-^>
 
 nnoremap <leader>syn :echo synIDattr(synID(line("."), col("."), 1), "name")<CR>
 
