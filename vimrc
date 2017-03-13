@@ -104,7 +104,7 @@ colorscheme solarized
 let loaded_matchparen = 1
 let c_no_comment_fold=1
 let c_gnu = 1
-let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.find.txt.gz,ID,tags"
+let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.find.txt.gz,ID,tags,*.pyc"
 let NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$']
 let g:vim_json_syntax_conceal = 0
 let g:ctrlp_working_path_mode = 0
