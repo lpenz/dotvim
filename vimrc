@@ -91,6 +91,7 @@ set nowrap
 set autowriteall
 set ignorecase
 set laststatus=2 " required by airline
+let g:airline_powerline_fonts = 1
 set listchars=tab:>\ ,trail:_
 set path=.,,
 set tags=tags
