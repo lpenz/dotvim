@@ -100,6 +100,11 @@ set makeprg=mymake
 " Color scheme
 set background=dark
 colorscheme solarized
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    set t_ut=
+endif
 
 " Configure plugins:
 let loaded_matchparen = 1
