@@ -1,53 +1,48 @@
 
 """""
-" Vundle:
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-" let Vundle manage Vundle
-" required! 
-Plugin 'gmarik/Vundle.vim'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
+Plug 'lpenz/vimcommander'
+Plug 'dbakker/vim-lint'
+Plug 'elzr/vim-json'
+Plug 'aklt/plantuml-syntax'
+Plug 'will133/vim-dirdiff'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/Align'
+Plug 'git://repo.or.cz/vcscommand.git'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-unimpaired'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'fatih/vim-go'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch'
-Plugin 'lpenz/vimcommander'
-Plugin 'dbakker/vim-lint'
-Plugin 'elzr/vim-json'
-Plugin 'aklt/plantuml-syntax'
-Plugin 'will133/vim-dirdiff'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/Align'
-Plugin 'git://repo.or.cz/vcscommand.git'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
-Plugin 'fatih/vim-go'
-
-Plugin 'rust-lang/rust.vim'
-Plugin 'syml/rust-codefmt.git'
+Plug 'rust-lang/rust.vim'
+Plug 'syml/rust-codefmt'
 
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
-Plugin 'google/vim-maktaba'
-Plugin 'google/vim-codefmt'
-Plugin 'lpenz/vim-codefmt-haskell'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'lpenz/vim-codefmt-haskell'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " `:help :Glaive` for usage.
-Plugin 'google/vim-glaive'
+Plug 'google/vim-glaive'
 
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
 call glaive#Install()
