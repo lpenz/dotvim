@@ -33,6 +33,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
+Plugin 'fatih/vim-go'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'syml/rust-codefmt.git'
