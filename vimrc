@@ -81,7 +81,7 @@ set showcmd
 set wildmenu
 let g:grepprg_default="grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ "
 let &grepprg=g:grepprg_default
-let mapleader=' '
+let g:mapleader=' '
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
 set nowrap
@@ -104,11 +104,11 @@ if &term =~ '256color'
 endif
 
 " Configure plugins:
-let loaded_matchparen = 1
-let c_no_comment_fold=1
-let c_gnu = 1
+let g:loaded_matchparen = 1
+let g:c_no_comment_fold=1
+let g:c_gnu = 1
 let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,*.o,*.d,*.a,.git,.find.txt,.find.txt.gz,ID,tags,*.pyc,*.rpm,GPATH,GRTAGS,GTAGS"
-let NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$',"^GPATH$","^GRTAGS$","^GTAGS$"]
+let g:NERDTreeIgnore = ['\.pyc$','\.o$','\.hi$','\.dyn_hi$','\.dyn_o$',"^GPATH$","^GRTAGS$","^GTAGS$"]
 let g:vim_json_syntax_conceal = 0
 let g:ctrlp_working_path_mode = 0
 
@@ -180,7 +180,6 @@ command! -nargs=+ Rcd :call s:RunInFileDir("<args>")
 
 " Expect folding """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 fu! ExpectFoldExpr(lnum)
-	let line = getline(a:lnum)
 	let prevline = getline(a:lnum - 1)
 	if prevline =~ '^proc.*{'
 		return 1
@@ -242,7 +241,7 @@ let g:miniBufExplVSplit = 40   " column width in chars
 let g:miniBufExplorerMoreThanOne=99
 let g:bufExplorerSplitType='v'
 let g:explHideFiles='^\.'
-let TE_Exclude_Dir_Pattern = '\.deps\|dox'
+let g:TE_Exclude_Dir_Pattern = '\.deps\|dox'
 
 nnoremap <silent> <F8> :call MBTOn()<CR>
 
@@ -286,8 +285,8 @@ fu! s:CU2()
 		exec "norm "
 	catch /.*/
 	endtry
-	if 0
-	elseif filereadable('.hg/00changelog.i')
+    let cmd='ls'
+	if filereadable('.hg/00changelog.i')
 		let cmd='hg status'
 	elseif filereadable('dmptinfo/platform.json')
 		let cmd='dmpt status'
@@ -311,7 +310,7 @@ command! -nargs=0 CU2 :silent call s:CU2()
 nmap <leader>u :CU2<CR>
 nmap <leader>U :CU<CR>
 
-let showmarks_enable=0
+let g:showmarks_enable=0
 let g:explHideFiles='^\.'
 
 """"
@@ -364,7 +363,7 @@ so $VIMRUNTIME/ftplugin/man.vim
 nnoremap K :Man <C-R><C-W><CR>
 
 " otl """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let otl_bold_headers=0
+let g:otl_bold_headers=0
 
 nnoremap <silent> <leader>o #*
 nnoremap <silent> <leader>o0 #*
@@ -442,14 +441,15 @@ autocmd BufReadPost *.doc silent %!antiword "%"
 autocmd BufReadPre *.pdf set ro
 autocmd BufReadPost *.pdf silent %!pdftotext -nopgbrk "%" -
 
-"let tlist_txt2tags_settings='txt2tags;d:Titles;m:Includes'
-let tlist_txt2tags_settings='txt2tags;d:Titles'
+"let g:tlist_txt2tags_settings='txt2tags;d:Titles;m:Includes'
+let g:tlist_txt2tags_settings='txt2tags;d:Titles'
 
-let tst="|"
+let g:tst="|"
 xnoremap <leader>m <ESC>'<mz'>mx:'z,'x s/^+--*/+-/g<CR>:'z,'x s/  */ /g<CR>:AlignCtrl =<lp1P1wm<CR>:'z,'x call Align("+-",tst,"+")<CR>:'z,'x s/^ //<CR>:'z,'x s/ *$//g<CR>:'z,'x g/^+/s/ /-/g<CR>
 
 " #ifdef INCLUDED """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 fu! PROTECTHEADER()
+    let tmp=""
 	exe "let tmp = 'basename ".@%."'"
 	let tmp = system(tmp)
 	let tmp = strpart(tmp, 0, strlen(tmp)-1)
@@ -511,9 +511,9 @@ xnoremap <silent> . :normal .<CR>
 " QF: """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! QFfindgrep(args, bang)
-	if ! exists("loaded_qf_findgrep")
+	if ! exists("g:loaded_qf_findgrep")
 		call QF_addProgramAndFormat('myfindgrep', 'findgrep $*', "%f")
-		let loaded_qf_findgrep = 1
+		let g:loaded_qf_findgrep = 1
 	endif
 	call QF_doExecute('myfindgrep', a:args, a:bang)
 endfu

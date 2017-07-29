@@ -8,7 +8,8 @@ before_script:
   - git clone https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
 
 script:
-  - sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v autoload
-  #- find . -name '*.vim' -exec vint vimrc gvimrc '{}' '+' # solve the issues before enabling it
+  # solve issues before checking more files:
+  - find . -name *.vim -not -path './syntax/*' -not -path './bundle/*' -not -path './plugin/*' -not -path './autoload/plug.vim' -exec sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v vimrc gvimrc {} +
+  #- find . -name '*.vim' -exec vint vimrc gvimrc '{}' '+'
   - ansible-playbook -i localhost, -c local ansible-playbook.yml
 

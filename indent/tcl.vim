@@ -56,7 +56,6 @@ function! GetTclIndent_fast()
     if lnum0 == 0
 	return 0
     endif
-    let flag = 1
     let ind = indent(lnum0)
     " get the line, trim trailing comments, pare nested braces
     let pline = s:Pare(s:Trim(getline(lnum0)))
