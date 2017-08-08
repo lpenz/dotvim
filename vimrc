@@ -28,6 +28,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'fatih/vim-go'
+Plug 'jremmen/vim-ripgrep'
 
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
