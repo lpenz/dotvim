@@ -119,8 +119,11 @@ if v:version >= 700
 end
 
 if v:version >= 730
-	set undofile
-	set undodir="/tmp/vim"
+    if !isdirectory("/tmp/vim-undo-dir")
+        call mkdir("/tmp/vim-undo-dir", "", 0700)
+    endif
+    set undodir="/tmp/vim-undo-dir"
+    set undofile
 end
 
 " Disable help:
