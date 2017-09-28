@@ -29,6 +29,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'fatih/vim-go'
 Plug 'jremmen/vim-ripgrep'
+Plug 'scrooloose/nerdcommenter'
 
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
