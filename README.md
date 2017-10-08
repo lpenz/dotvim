@@ -8,11 +8,9 @@ My ~/.vim directory, with custom plugins and filetype configurations - everythin
 
 Manually:
 
-    $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    $ vim -c 'PluginInstall' -c 'qa!'
-
-    $ make -C $HOME/.vim/bundle/vimproc.vim
+    $ vim -c 'PlugInstall' -c 'qa!'
 
 
 ... or using ansible-pull:
