@@ -25,7 +25,6 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/Align'
 Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -37,6 +36,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'fatih/vim-go'
 Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-vinegar'
 
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
@@ -151,8 +151,7 @@ nnoremap <silent> <F7> :Errors<CR>
 nnoremap <silent> <F10> :make<CR>
 nnoremap <silent> <F11> :call VimCommanderToggle()<CR>
 imap <silent> <F10> <C-O><F10>
-
-nnoremap <silent> <F12> :NERDTreeToggle<CR>
+nnoremap <silent> <F12> :Lex<CR>
 
 nnoremap <silent> <C-C> :qa!<CR>
 nnoremap <silent> <C-Q> :bd<CR>
