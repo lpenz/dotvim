@@ -26,6 +26,7 @@ Plug 'vim-scripts/Align'
 Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mitsuhiko/vim-jinja'
@@ -148,6 +149,9 @@ nnoremap <silent> <F4> :cn<CR>zv
 nnoremap <silent> <F5> @q
 nnoremap <silent> <F6> @w
 nnoremap <silent> <F7> :Errors<CR>
+nnoremap <silent> <F8> :CtrlPBuffer<CR>
+nnoremap <silent> <leader>bb :CtrlPBuffer<CR>
+nnoremap <silent> <leader>ff :CtrlP<CR>
 nnoremap <silent> <F10> :make<CR>
 nnoremap <silent> <F11> :call VimCommanderToggle()<CR>
 imap <silent> <F10> <C-O><F10>
@@ -234,27 +238,6 @@ nnoremap <silent> <F9> :call QFtoggle()<CR>
 
 " Scratch """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-n> :Scratch<CR><C-W><C-O>
-
-" minibuffexplorer """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-fu! MBTOn()
-	nnoremap <silent> <F8> :call MBTOff()<CR>
-	let g:miniBufExplorerMoreThanOne=0
-	TMiniBufExplorer
-	norm 
-	nnoremap <buffer> <CR> :call LPenzMBESelectBuffer()<CR>:call MBTOff()<CR>:<BS>
-endf
-fu! MBTOff()
-	nnoremap <silent> <F8> :call MBTOn()<CR>
-	let g:miniBufExplorerMoreThanOne=99
-	TMiniBufExplorer
-endf
-let g:miniBufExplVSplit = 40   " column width in chars
-let g:miniBufExplorerMoreThanOne=99
-let g:bufExplorerSplitType='v'
-let g:explHideFiles='^\.'
-let g:TE_Exclude_Dir_Pattern = '\.deps\|dox'
-
-nnoremap <silent> <F8> :call MBTOn()<CR>
 
 " Abrevs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ab #i #include
