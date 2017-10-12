@@ -5,40 +5,41 @@ if filereadable(glob("~/.vim.local/vimrc"))
     source ~/.vim.local/vimrc
 endif
 
-
 """""
 set nocompatible
 filetype off
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'scrooloose/syntastic'
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-dispatch'
-Plug 'lpenz/vimcommander'
-Plug 'dbakker/vim-lint'
-Plug 'elzr/vim-json'
-Plug 'aklt/plantuml-syntax'
-Plug 'will133/vim-dirdiff'
-Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/Align'
-Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'altercation/vim-colors-solarized'
+
+Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'mitsuhiko/vim-jinja'
-Plug 'mileszs/ack.vim'
-Plug 'tpope/vim-unimpaired'
-Plug 'jceb/vim-orgmode'
-Plug 'tpope/vim-speeddating'
-Plug 'fatih/vim-go'
+Plug 'dbakker/vim-lint'
+Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'jremmen/vim-ripgrep'
+Plug 'lpenz/vimcommander'
+Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/matchit.zip'
+Plug 'will133/vim-dirdiff'
 
+Plug 'aklt/plantuml-syntax'
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
+Plug 'jceb/vim-orgmode'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
 
