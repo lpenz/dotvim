@@ -527,3 +527,12 @@ fu! s:See()
 endf
 command! -nargs=0 See :call s:See()
 nmap <silent> <F3> :See<CR>
+
+"""
+
+" Local overrides
+
+if filereadable(glob("~/.vim.local/vimrc.after"))
+    source ~/.vim.local/vimrc.after
+endif
+
