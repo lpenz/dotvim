@@ -172,6 +172,9 @@ nnoremap <leader>syn :echo synIDattr(synID(line("."), col("."), 1), "name")<CR>
 
 nnoremap <leader>v :grep <C-R><C-W> . <CR>
 
+" Make ESC leave terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 "#############################################################################
 "#############################################################################
 "# Legacy stuff, should be better analysed: ##################################
