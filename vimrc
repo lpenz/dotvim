@@ -11,11 +11,14 @@ filetype off
 
 call plug#begin('~/.vim/bundle')
 
+" Theme
 Plug 'altercation/vim-colors-solarized'
 
+" Plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'dbakker/vim-lint'
 Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'jremmen/vim-ripgrep'
@@ -34,6 +37,8 @@ Plug 'vim-scripts/Align'
 Plug 'vim-scripts/matchit.zip'
 Plug 'will133/vim-dirdiff'
 
+" Filetype native syntax and indentation
+Plug 'rust-lang/rust.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
