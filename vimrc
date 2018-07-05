@@ -154,9 +154,9 @@ nnoremap <silent> <F4> :cn<CR>zv
 nnoremap <silent> <F5> @q
 nnoremap <silent> <F6> @w
 nnoremap <silent> <F7> :Errors<CR>
-nnoremap <silent> <F8> :CtrlPBuffer<CR>
-nnoremap <silent> <leader>bb :CtrlPBuffer<CR>
-nnoremap <silent> <leader>ff :CtrlP<CR>
+nnoremap <silent> <F8> :Buffers<CR>
+nnoremap <silent> <leader>bb :Buffers<CR>
+nnoremap <silent> <leader>ff :Files<CR>
 nnoremap <silent> <F10> :make<CR>
 nnoremap <silent> <F11> :call VimCommanderToggle()<CR>
 imap <silent> <F10> <C-O><F10>
