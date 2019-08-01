@@ -91,7 +91,6 @@ set diffopt=filler,vertical
 set noswapfile
 syntax enable
 set notitle
-set mouse=a
 set hlsearch
 set showcmd
 set wildmenu
