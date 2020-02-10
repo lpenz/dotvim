@@ -9,7 +9,7 @@ endif
 set nocompatible
 filetype off
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
