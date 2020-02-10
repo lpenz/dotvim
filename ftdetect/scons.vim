@@ -1,4 +1,7 @@
 
-au BufRead,BufNewFile SConstruct set filetype=scons
-au BufRead,BufNewFile SConscript set filetype=scons
+augroup ftdetect_scons
+    autocmd!
+    autocmd BufRead,BufNewFile SConstruct set filetype=scons
+    autocmd BufRead,BufNewFile SConscript set filetype=scons
+augroup END
 
