@@ -1,15 +1,20 @@
 " Local configuration
 
+let $VIMHOME=expand('<sfile>:p:h')
+
 if filereadable(glob("~/.vim.local/vimrc"))
-    exe 'set rtp+=' . expand('~/.vim.local')
-    source ~/.vim.local/vimrc
+   exe 'set rtp+=' . expand('~/.vim.local')
+   source ~/.vim.local/vimrc
 endif
 
-"""""
-set nocompatible
-filetype off
+if !has('nvim')
+   set nocompatible
+   filetype off
+endif
 
-call plug#begin('~/.vim/plugged')
+" Plugin installation
+
+call plug#begin($VIMHOME . '/plugged')
 
 " Theme
 Plug 'altercation/vim-colors-solarized'
@@ -17,11 +22,11 @@ Plug 'altercation/vim-colors-solarized'
 " Plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'dbakker/vim-lint'
 Plug 'git://repo.or.cz/vcscommand.git'
 Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'lpenz/vimcommander'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
@@ -35,10 +40,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/otf.vim'
 Plug 'will133/vim-dirdiff'
 
 " Filetype native syntax and indentation
-Plug 'rust-lang/rust.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
@@ -48,6 +53,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
 
+" Filetype AutoFormat modules
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plug 'google/vim-maktaba'
@@ -96,7 +102,6 @@ set showcmd
 set wildmenu
 let g:grepprg_default="grep\ -nrI\ --exclude=ChangeLog\ --exclude=ID\ --exclude=tags\ --exclude='*.d'\ --exclude='*.pyc'\ --exclude-dir=CVS\ --exclude-dir=_darcs\ --exclude-dir=.hg\ --exclude-dir=.bzr\ --exclude='.glimpse_*'\ --exclude-dir=dev\ --exclude=cvsps.txt\ --exclude=cvscs.txt\ --exclude-dir=.git\ --exclude-dir=.svn\ $*\ "
 let &grepprg=g:grepprg_default
-let g:mapleader=' '
 set expandtab tabstop=4 shiftwidth=4
 set makeprg=mymake
 set nowrap
@@ -118,7 +123,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Configure plugins:
+" Plugin config
 let g:loaded_matchparen = 1
 let g:c_no_comment_fold=1
 let g:c_gnu = 1
@@ -140,14 +145,18 @@ if v:version >= 730
     set undofile
 end
 
+
+" Keys:
+let g:mapleader=' '
+
 " Disable help:
 nmap <F1> :echo ""<CR>
 imap <F1> <C-O>:echo ""<CR>
 
-" Keys:
 nnoremap <silent> <leader>fs :update!<CR>
 nnoremap <silent> <F2> :update!<CR>
 imap <silent> <F2> <C-O><F2>
+imap <silent> <M-F2> <C-O><F2>
 nnoremap <silent> <C-P> <C-I>
 nnoremap <silent> <F4> :cn<CR>zv
 nnoremap <silent> <F5> @q
