@@ -72,16 +72,28 @@ call glaive#Install()
 Glaive codefmt plugin[mappings]
 """""
 
-" Settings
+" Theme
+
 set background=dark
 colorscheme solarized
-set expandtab tabstop=4 shiftwidth=4
-set nowrap
-set noswapfile
+
+" Misc settings, keep sorted
+
 set autowriteall
+set completeopt=longest,menu
+set expandtab tabstop=4 shiftwidth=4
 set ignorecase
+set noswapfile
+set nowrap
+set spelllang=pt,en
+set undofile undodir="/tmp/vim-undo-dir"
+
+if !isdirectory("/tmp/vim-undo-dir")
+    call mkdir("/tmp/vim-undo-dir", "", 0700)
+endif
 
 " Plugin config
+
 let g:loaded_matchparen = 1
 
 let g:ale_sign_column_always = 1
@@ -101,24 +113,11 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 20
 let g:vim_json_syntax_conceal = 0
 
-if v:version >= 700
-	set completeopt=longest,menu
-	set spelllang=pt,en
-end
+" Keys
 
-if v:version >= 730
-    if !isdirectory("/tmp/vim-undo-dir")
-        call mkdir("/tmp/vim-undo-dir", "", 0700)
-    endif
-    set undodir="/tmp/vim-undo-dir"
-    set undofile
-end
-
-
-" Keys:
 let g:mapleader=' '
 
-" Disable help:
+" Disable help
 nmap <F1> :echo ""<CR>
 imap <F1> <C-O>:echo ""<CR>
 
