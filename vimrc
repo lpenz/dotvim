@@ -165,7 +165,7 @@ xnoremap # y?\V<C-R>=substitute(escape(@@,"?\\"),"\n","\\\\n","ge")<CR><CR>
 
 " Use ripgrep as grepprg if it exists
 if executable('rg')
-   set grepprg=rg\ -u\ --vimgrep\ -g\ '!/tags'
+   set grepprg=rg\ --vimgrep\ -g\ '!/tags'
 endif
 
 """
