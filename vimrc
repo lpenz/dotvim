@@ -82,6 +82,7 @@ colorscheme solarized
 set autowriteall
 set completeopt=longest,menu
 set expandtab tabstop=4 shiftwidth=4
+set hlsearch
 set ignorecase
 set noswapfile
 set nowrap
