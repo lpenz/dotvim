@@ -88,6 +88,7 @@ set noswapfile
 set nowrap
 set spelllang=pt,en
 set undofile undodir="/tmp/vim-undo-dir"
+set wildmenu
 
 if !isdirectory("/tmp/vim-undo-dir")
     call mkdir("/tmp/vim-undo-dir", "", 0700)
