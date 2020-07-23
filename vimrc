@@ -52,6 +52,7 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'syml/rust-codefmt'
+Plug 'LnL7/vim-nix'
 
 " Filetype AutoFormat modules
 " Add maktaba and codefmt to the runtimepath.
