@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e -x
+
+find . \
+     -name "*.vim" \
+     -not -path './syntax/*' \
+     -not -path './bundle/*' \
+     -not -path './plugin/*' \
+     -not -path './autoload/plug.vim' \
+     -exec sh /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v vimrc gvimrc {} +
+
+# find . -name '*.vim' -exec vint vimrc gvimrc '{}' '+'

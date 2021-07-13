@@ -1,0 +1,6 @@
+---
+name: vimlint
+description: vimlint
+runs:
+  using: docker
+  image: Dockerfile
