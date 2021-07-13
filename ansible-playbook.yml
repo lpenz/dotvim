@@ -1,9 +1,31 @@
 - hosts: all
   tasks:
     # - apt: package=vim state=present
-    - git: repo="https://github.com/lpenz/dotvim.git" dest="{{lookup('env','HOME')}}/.vim"
-    - file: state=directory dest="{{lookup('env','HOME')}}/.vim/autoload"
-    - get_url: url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" dest="{{lookup('env','HOME')}}/.vim/autoload/plug.vim"
-    - file: state=link src="{{lookup('env','HOME')}}/.vim/vimrc" dest="{{lookup('env','HOME')}}/.vimrc"
-    - file: state=link src="{{lookup('env','HOME')}}/.vim/gvimrc" dest="{{lookup('env','HOME')}}/.gvimrc"
-    - command: vim -X -n -u NONE -c 'silent! source ~/.vimrc' -c 'PlugInstall' -c 'qa!'
+    - name: git clone dotvim
+      git:
+        repo: "https://github.com/lpenz/dotvim.git"
+        dest: "{{ lookup('env','HOME') }}/.vim"
+        version: main
+      notify: PlugInstall
+    - name: create ~/.vim/autoload
+      file:
+        state: directory
+        dest: "{{ lookup('env','HOME') }}/.vim/autoload"
+    - name: download plug.vim
+      get_url:
+        url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+        dest: "{{ lookup('env','HOME') }}/.vim/autoload/plug.vim"
+      notify: PlugInstall
+    - name: install .vimrc
+      file:
+        state: link
+        src: "{{ lookup('env','HOME') }}/.vim/vimrc"
+        dest: "{{ lookup('env','HOME') }}/.vimrc"
+    - name: install .gvimrc
+      file:
+        state: link
+        src: "{{ lookup('env','HOME') }}/.vim/gvimrc"
+        dest: "{{ lookup('env','HOME') }}/.gvimrc"
+  handlers:
+    - name: PlugInstall
+      command: vim -X -n -u NONE -c 'silent! source ~/.vimrc' -c 'PlugInstall' -c 'qa!'

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lpenz/dotvim.png?branch=master)](https://travis-ci.org/lpenz/dotvim)
+[![CI](https://github.com/lpenz/dotvim/actions/workflows/ci.yml/badge.svg)](https://github.com/lpenz/dotvim/actions/workflows/ci.yml)
 
 # dotvim
 
