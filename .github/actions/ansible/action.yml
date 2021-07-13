@@ -1,0 +1,6 @@
+---
+name: ansible
+description: ansible
+runs:
+  using: docker
+  image: Dockerfile

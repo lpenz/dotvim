@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e -x
+
+ansible-playbook -i localhost, -c local ansible-playbook.yml
+
