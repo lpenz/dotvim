@@ -87,7 +87,7 @@ set hlsearch
 set ignorecase
 set noswapfile
 set nowrap
-set spelllang=pt,en
+" set spelllang=pt,en
 set undofile undodir="/tmp/vim-undo-dir"
 set wildmenu
 
