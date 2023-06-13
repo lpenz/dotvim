@@ -9,7 +9,7 @@ let g:loaded_see = 1
 " Section: Utility
 
 fu! s:See()
-	call system('(see ' . @% . ') &')
+	call system('/bin/bash -c "(see ' . @% . ') & disown"')
 endf
 
 " Section: Exports
