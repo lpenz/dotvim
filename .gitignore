@@ -3,3 +3,4 @@
 /.netrwhist
 /vimrc.local
 /doc/tags
+/autoload/plug.vim.old
